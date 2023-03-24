@@ -1,0 +1,76 @@
+import MCquestion from "./MCquestion";
+import linkedListImg from "./assets/linkedList.png";
+
+
+# Linked Lists
+
+A linked list is a data structure used to store a sequence of elements, where each element points to the next one in the sequence. Unlike an array, which stores its elements in contiguous memory locations, a linked list stores its elements in nodes that are scattered throughout memory, and each node contains a reference to the next node in the list.
+
+## Anatomy of a Linked List
+
+A linked list is made up of a sequence of nodes, where each node contains two pieces of information:
+
+- **Data**: The actual value or payload that the node holds.
+- **Next**: A reference to the next node in the list.
+
+Here's an example of a linked list that contains three nodes:
+
+![Linked List Example](linkedListImg)
+
+In this example, each node contains a piece of data and a reference to the next node. The first node is the head of the list, and the last node is the tail.
+
+## Types of Linked Lists
+
+There are several types of linked lists, including:
+
+- **Singly Linked List**: Each node contains a reference to the next node in the list.
+- **Doubly Linked List**: Each node contains a reference to both the next and previous nodes in the list.
+- **Circular Linked List**: The last node in the list contains a reference to the first node, creating a circular structure.
+
+## Quiz Time!
+
+Let's test your understanding of linked lists with some multiple-choice questions:
+
+<MCquestion 
+  question={{
+    question: 'What is a linked list?',
+    options: [
+      'A data structure used to store a sequence of elements where each element points to the next one in the sequence.',
+      'A way to link two computers together so they can share data.',
+      'A list of hyperlinks on a web page.',
+      'A list of items that are sorted in ascending order.'
+    ],
+    answerIndex: 0,
+    answerExplanation: 'Correct! A linked list is a data structure used to store a sequence of elements where each element points to the next one in the sequence.',
+  }}
+/>
+
+<MCquestion 
+  question={{
+    question: 'What is the difference between an array and a linked list?',
+    options: [
+      'An array stores its elements in contiguous memory locations, while a linked list stores its elements in scattered memory locations.',
+      'An array can only hold one type of data, while a linked list can hold multiple types of data.',
+      'An array is faster than a linked list for accessing elements, but a linked list is faster for inserting and deleting elements.',
+      'An array is a linear data structure, while a linked list is a hierarchical data structure.'
+    ],
+    answerIndex: 0,
+    answerExplanation: 'Correct! An array stores its elements in contiguous memory locations, while a linked list stores its elements in scattered memory locations.',
+  }}
+/>
+
+<MCquestion 
+  question={{
+    question: 'What is the tail of a linked list?',
+    options: [
+      'The last node in the list.',
+      'The first node in the list.',
+      'The node that contains the smallest value.',
+      'The node that contains the largest value.'
+    ],
+    answerIndex: 0,
+    answerExplanation: 'Correct! The tail of a linked list is the last node in the list.',
+  }}
+/>
+
+Congratulations, you've completed blahh.
