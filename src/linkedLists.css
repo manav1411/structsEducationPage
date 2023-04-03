@@ -13,7 +13,7 @@ body {
 .MCquestion__answerExplanation {
   color: #fff;
 }
-
+/* quiz buttons */
 input[type="radio"] {
   appearance: none;
   position: relative;
@@ -22,6 +22,7 @@ input[type="radio"] {
   border-radius: 50px;
 }
 
+/* correct/incorrect buttons */
 .MCquestion__option--correct input[type="radio"] {
   background-color: green;
 }

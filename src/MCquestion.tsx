@@ -2,10 +2,19 @@ import React, { useState, useEffect, useRef } from 'react';
 import { MCQuestionProps, Question } from './types';
 import './linkedLists.css';
 
+
+//input: question struct (asking question, options, correct index, explanation)
+//output: multiple choice question component
+//features: click option to check right/wrong/explanation. click same option again to reset
 function MCQuestion({ question }: MCQuestionProps) {
+
+  //initialises state of question (asking, correct, incorrect)
+  //initialises state of chosen index (-1 (none), 0, 1, 2, ...)
   const [questionState, setQuestionState] = useState('asking');
   const [chosenOption, setChosenOption] = useState(-1);
 
+
+  //checks if chosen answer is correct. sets state as required.
   function handleOptionSelect(optionIndex: number) {
     if (optionIndex === question.answerIndex) {
       setQuestionState('correct');
@@ -15,6 +24,7 @@ function MCQuestion({ question }: MCQuestionProps) {
     setChosenOption(optionIndex);
   }
 
+  //resets to no selected options.
   function handleReset() {
     setQuestionState('asking');
     setChosenOption(-1);
@@ -65,7 +75,5 @@ function MCQuestion({ question }: MCQuestionProps) {
     </div>
   );
 }
-
-
 
 export default MCQuestion;
