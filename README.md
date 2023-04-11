@@ -1,3 +1,7 @@
+### site: structs.sh
+
+this repo provides functionality of various tools to build MDX pages for structs.sh. Currently in development.
+
 
 ## TODO:  
  1. **update quiz buttons:** such that clicking each option instantly shows "incorrect" or "correct, explanation blah blah" next to question.
