@@ -8,7 +8,6 @@ interface Props {
   children: string;
 }
 
-
 function CodeBlock({ children }: Props): JSX.Element {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => setCopied(true);
