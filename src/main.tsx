@@ -7,6 +7,9 @@ import Example from './example.mdx'
 import './linkedLists.css';
 import { Question } from './types';
 import LinkedLists from './linkedLists.mdx';
+import LinkedList from './linkedList.mdx'
+import CodeBlock from './CodeBlock';
+
 const App1 = () => {
   return <h1>Hello, World!</h1>;
 };
@@ -21,6 +24,8 @@ const capitalOfFranceQuestion: Question = {
 //wrapper component for all components.
 const Wrapper = () => (
   <>
+    <CodeBlock>int main</CodeBlock>
+    <LinkedList/>
     <App />
     <App1 />
     <LinkedLists />
