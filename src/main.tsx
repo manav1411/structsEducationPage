@@ -20,7 +20,6 @@ const capitalOfFranceQuestion: Question = {
 const Wrapper = () => (
   <>
     <CodeBlock>int main</CodeBlock>
-    <LinkedList/>
     <LinkedLists />
   </>
 );
