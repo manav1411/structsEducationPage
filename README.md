@@ -10,6 +10,8 @@ this repo provides functionality of various tools to build MDX pages for structs
  
  3. **code block component:** implement a code-block react component. should have C syntax highlighting. button to copy all code. input is struct of fileName and codeText. use React-syntax-highlighter potentially.
  
+ 4. **future fixes:** fix file structure, implement quiz pages (consider state, GPT suggestions), connect quiz page with edu page, create multiple edu-quiz page pairs, create main page to go to all edu-quiz pairs, add back button in each edu-quiz pair to go back to main page.
+ 
  
  ## FILE STRUCTURE
 2 folders:
