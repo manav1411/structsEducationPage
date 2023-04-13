@@ -2,7 +2,8 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Question } from './types';
 import LinkedLists from './linkedLists.mdx';
-import './linkedLists.css';
+import LinkedList from './linkedList.mdx'
+import CodeBlock from './CodeBlock';
 
 //example of what props MCquestion component takes.
 const capitalOfFranceQuestion: Question = {
@@ -18,6 +19,8 @@ const capitalOfFranceQuestion: Question = {
 //wrapper component for all components. can add more.
 const Wrapper = () => (
   <>
+    <CodeBlock>int main</CodeBlock>
+    <LinkedList/>
     <LinkedLists />
   </>
 );
