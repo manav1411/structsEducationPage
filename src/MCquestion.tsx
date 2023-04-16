@@ -1,7 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { MCQuestionProps, Question } from './types';
-import './linkedLists.css';
+import React, { useState } from 'react';
+import './global.css';
 
+//question structure
+export interface Question {
+  question: string;
+  options: string[];
+  answerIndex: number;
+  answerExplanation: string;
+}
+export interface MCQuestionProps {
+  question: Question;
+}
 
 //input: question struct (asking question, options, correct index, explanation)
 //output: multiple choice question component

@@ -8,11 +8,6 @@ body {
   margin-left: 50px;
 }
 
-
-/* Quiz */
-.MCquestion__answerExplanation {
-  color: #fff;
-}
 /* quiz buttons */
 input[type="radio"] {
   appearance: none;
@@ -22,10 +17,13 @@ input[type="radio"] {
   border-radius: 50px;
 }
 
-/* correct/incorrect buttons */
+/* correct/incorrect/selected buttons */
 .MCquestion__option--correct input[type="radio"] {
   background-color: green;
 }
 .MCquestion__option--incorrect input[type="radio"] {
   background-color: red;
+}
+.MCquestion__option--selected input[type="radio"] {
+  background-color: #808080;
 }

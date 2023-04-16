@@ -1,35 +1,27 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { Question } from './types';
-import LinkedLists from './linkedLists.mdx';
-import LinkedList from './linkedList.mdx'
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import CodeBlock from './CodeBlock';
+import Roadmap from './Roadmap'
 
-//example of what props MCquestion component takes.
-const capitalOfFranceQuestion: Question = {
-  question: 'What is the capital of France?',
-  options: ['London', 'Berlin', 'Paris', 'Madrid'],
-  answerIndex: 2,
-  answerExplanation: 'Paris is the capital of France.'
-};
-//use it like this in wrapper:
-//   <MCquestion question={capitalOfFranceQuestion} />
+//need to import all edu and quiz files. TODO: make this dynamic.
+import LinkedLists from './edu_pages/linkedLists.mdx';
+import LinkedListsQuiz from './quiz_pages/linkedListsQuiz.mdx';
 
-
-//wrapper component for all components. can add more.
-const Wrapper = () => (
-  <>
-    <CodeBlock>int main</CodeBlock>
-    <LinkedLists />
-  </>
-);
-
-//renders the wrapper component
+//renders the main component(s).
 const targetContainer = document.getElementById('root');
 if (targetContainer) {
   const root = createRoot(targetContainer);
-  root.render(<Wrapper />);
-  
+  root.render(  <>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/codeBlock_temp" element= {<CodeBlock>int main</CodeBlock>} />
+        <Route path="/linkedLists" element= {<LinkedLists />} />
+        <Route path="/linkedListsQuiz" element= {<LinkedListsQuiz />} />
+        <Route path="/roadmap" element= {<Roadmap />} />
+      </Routes>
+    </BrowserRouter>
+  </>);
 } else {
   console.error('Could not find targetContainer!');
 }
