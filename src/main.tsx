@@ -1,7 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import CodeBlock from './CodeBlock';
 import Roadmap from './Roadmap';
 
 // imports all edu and quiz files.

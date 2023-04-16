@@ -1,4 +1,3 @@
-// typings.d.ts
 declare var require: {
     (path: string): any;
     context: (directory: string, useSubdirectories?: boolean, regExp?: RegExp) => {
