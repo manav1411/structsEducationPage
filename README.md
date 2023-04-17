@@ -2,15 +2,14 @@
 
 this repo provides functionality of various tools to build MDX pages for structs.sh. Currently in development.
 
-
-## TODO:  
- 1. **update quiz buttons:** such that clicking each option instantly shows "incorrect" or "correct, explanation blah blah" next to question.
+## TODO: 
+ 1. **future fixes:** consider state, GPT suggested quiz questions.
  
- 2. **update quiz buttons:** <POTENTIALLY DONT DO> change "submit" button to "show all" button, automatically shows all correct/incorrect options. same action as manually clicking all buttons.
+ 2. **visualiser:** add connection to visualiser, perhaps do old one if new ppl taking too long. or leave this till new ppl done.
  
- 3. **code block component:** implement a code-block react component. should have C syntax highlighting. button to copy all code. input is struct of fileName and codeText. use React-syntax-highlighter potentially.
+ 3. **gamify:** consider adding gamification to quiz part.
  
- 4. **future fixes:** fix file structure, implement quiz pages (consider state, GPT suggestions), connect quiz page with edu page, create multiple edu-quiz page pairs, create main page to go to all edu-quiz pairs, add back button in each edu-quiz pair to go back to main page.
+ 4. **progress bar:** add progress bar to pages, depending on how much has been read.
  
  
  ## FILE STRUCTURE
