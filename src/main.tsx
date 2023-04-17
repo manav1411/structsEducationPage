@@ -7,7 +7,7 @@ import Roadmap from './Roadmap';
 const eduPages = import.meta.glob('./edu_pages/*.mdx');
 const quizPages = import.meta.glob('./quiz_pages/*.mdx');
 
-// generates a route for every edu/quiz file
+// generates a route for all given paths
 async function generateRoutes(pages: any) {
   const routes = [];
 
