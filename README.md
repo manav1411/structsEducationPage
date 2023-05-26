@@ -15,7 +15,7 @@ this repo provides functionality of various tools to build MDX pages for structs
  
  5. **merge code editor with UI** add progress bar to pages, depending on how many.
  
- 6. **API key security:** security of not pushing key to frontend. avoid user agent spoofing, people stealing keys by scraping frontend.
+ 6. **API key security:** security of not pushing key to frontend. avoid user agent spoofing, people stealing keys by scraping frontend. make a new express server. copy paste code from getting started->getting ready to use the API. 
 
 
 
