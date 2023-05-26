@@ -14,6 +14,8 @@ this repo provides functionality of various tools to build MDX pages for structs
  4. **visualiser:** add connection to visualiser, perhaps do old one if new ppl taking too long. or leave this till new ppl done.
  
  5. **merge code editor with UI** add progress bar to pages, depending on how many.
+ 
+ 6. **API key security:** security of not pushing key to frontend. avoid user agent spoofing, people stealing keys by scraping frontend.
 
 
 
