@@ -11,7 +11,7 @@ this repo provides functionality of various tools to build MDX pages for structs
 
 <LATER>
 
- 5. **visualiser:** add connection to visualiser, perhaps do old one if new ppl taking too long. or leave this till new ppl done.
+ 4. **visualiser:** add connection to visualiser, perhaps do old one if new ppl taking too long. or leave this till new ppl done.
  
  5. **merge code editor with UI** add progress bar to pages, depending on how many.
 
