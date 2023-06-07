@@ -11,14 +11,10 @@ type Props = {
   gradientColor?: string
 }
 
-export const ProgressBar: React.FC<Props> = ({
-  color = '#1ce',
-  height = 4,
-  direction = 'right',
-  position = 'top',
-  gradient = false,
-  gradientColor = 'yellow',
-}) => {
+const ProgressBar: React.FC<Props> = (props) => {
+  const { color, height, direction, position, gradient, gradientColor } = props;
+  console.log(color);
+  console.log(height);
   const [scroll, setScroll] = useState(0)
   const ticking = useRef(false)
 
@@ -47,7 +43,7 @@ export const ProgressBar: React.FC<Props> = ({
         position: 'fixed',
         left: 0,
         right: 0,
-        height,
+        height: height,
         zIndex: 999,
         top: position === 'top' ? 0 : 'unset',
         bottom: position === 'bottom' ? 0 : 'unset',

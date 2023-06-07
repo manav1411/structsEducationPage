@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import tick from './assets/icons8-tick.svg';
+import cross from './assets/icons8-cross.svg';
 import './global.css';
 
 //question structure
@@ -40,7 +42,11 @@ function MCQuestion({ question }: MCQuestionProps) {
   }
 
   return (
-    <div>
+    <div style={{
+      background: 'white',
+      padding: '20px',
+      borderRadius: '15px'
+    }}>
       <h2>{question.question}</h2>
       <div>
         {question.options.map((option, index) => (
@@ -61,6 +67,8 @@ function MCQuestion({ question }: MCQuestionProps) {
                 onClick={handleReset}
               />
               {option}
+              <img src={tick} alt="tick" />
+              <img src={cross} alt="cross" />
             </label>
           </div>
         ))}
@@ -76,9 +84,9 @@ function MCQuestion({ question }: MCQuestionProps) {
       {questionState === 'incorrect' && (
         <div>
           <h3>Sorry, that's incorrect. The correct answer is: </h3>
-          <p className="MCquestion__answerExplanation">
+          {/* <p className="MCquestion__answerExplanation">
             {question.answerExplanation}
-          </p>
+          </p> */}
         </div>
       )}
     </div>
