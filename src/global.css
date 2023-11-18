@@ -3,27 +3,49 @@
 /* Body */
 body {
   font-family: sans-serif;
-  background-color: #c8c6c6;
-  color: #000000;
-  margin-left: 50px;
+  background-color: #1c1454; /* Dark purple background */
+  color: #ffffff; /* White text */
+  margin: 0;
+  padding: 20px;
 }
 
-/* quiz buttons */
-input[type="radio"] {
+/* General styling for quiz buttons and inputs */
+input[type="radio"], button, input[type="text"] {
   appearance: none;
-  position: relative;
   padding: 10px 20px;
   border: 2px solid #262c30;
   border-radius: 50px;
+  background-color: #4b4870; /* Slightly lighter purple for inputs and buttons */
+  color: #ffffff; /* White text for buttons and inputs */
+  margin: 5px 0;
+  cursor: pointer;
 }
 
-/* correct/incorrect/selected buttons */
+/* Hover effect for buttons and radio inputs */
+input[type="radio"]:hover, button:hover, input[type="text"]:hover {
+  background-color: #5c5980;
+}
+
+/* Correct/incorrect/selected button styles */
 .MCquestion__option--correct input[type="radio"] {
-  background-color: green;
+  background-color: #37b537; /* Green for correct */
 }
 .MCquestion__option--incorrect input[type="radio"] {
-  background-color: red;
+  background-color: #d9534f; /* Red for incorrect */
 }
 .MCquestion__option--selected input[type="radio"] {
-  background-color: #808080;
+  background-color: #a9a9a9; /* Grey for selected */
+}
+
+/* Reset and submit button specific styles */
+.reset-button {
+  background-color: #ff6b6b; /* Red-ish color for reset button */
+}
+
+/* Results section styling */
+.results {
+  padding: 15px;
+  background-color: #504e70; /* A different shade of purple for results section */
+  border-radius: 10px;
+  margin-top: 20px;
 }

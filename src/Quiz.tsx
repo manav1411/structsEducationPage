@@ -1,13 +1,16 @@
-// Quiz.tsx
 import React, { useState } from 'react';
 import './global.css';
+import SAQuestion from './ShortAnswerQuestion';
 
 export interface Question {
   text: string;
-  options: string[];
-  answerIndex: number;
+  options?: string[]; // Optional for short answer questions
+  answerIndex?: number; // Optional for short answer questions
+  shortAnswer?: string; // For short answer questions
+  type?: 'mcq' | 'short-answer'; // Type of the question
   answerExplanation: string;
 }
+
 
 type MCQuestionProps = {
   question: Question;
@@ -35,7 +38,7 @@ const MCQuestion: React.FC<MCQuestionProps> = ({ question, selectedOption, onOpt
     <div>
       <h2>{question.text}</h2>
       <div>
-        {question.options.map((option, index) => (
+        {question.options?.map((option, index) => (
           <div key={index}>
             <label className={`MCquestion__option ${getButtonClassName(index)}`}>
               <input
@@ -61,7 +64,19 @@ type QuizProps = {
 
 const Quiz: React.FC<QuizProps> = ({ questions }) => {
   const [selectedOptions, setSelectedOptions] = useState<number[]>(Array(questions.length).fill(-1));
+  const [shortAnswers, setShortAnswers] = useState<string[]>(Array(questions.length).fill(''));
   const [submitted, setSubmitted] = useState(false);
+
+
+  const handleShortAnswerChange = (questionIndex: number, answer: string) => {
+    setShortAnswers((prevAnswers) => {
+      const newAnswers = [...prevAnswers];
+      newAnswers[questionIndex] = answer;
+      return newAnswers;
+    });
+  };
+
+
 
   const handleOptionSelect = (questionIndex: number, optionIndex: number) => {
     setSelectedOptions((prevOptions) => {
@@ -80,22 +95,42 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
     setSubmitted(false);
   };
 
-  const score = selectedOptions.reduce(
-    (acc, option, idx) => (option === questions[idx].answerIndex ? acc + 1 : acc),
-    0
-  );
+  const score = questions.reduce((acc, question, idx) => {
+    if (question.type === 'short-answer') {
+      return acc + (shortAnswers[idx].trim() === question.shortAnswer ? 1 : 0);
+    } else { //if type is mcq, or undefined, assumes mcq type
+      return acc + (selectedOptions[idx] === question.answerIndex ? 1 : 0);
+    }
+  }, 0);
+
+
+
 
   return (
     <div className="quiz">
-      {questions.map((question, idx) => (
-        <MCQuestion
-          key={idx}
-          question={question}
-          selectedOption={selectedOptions[idx]}
-          onOptionSelect={(optionIndex) => handleOptionSelect(idx, optionIndex)}
-          submitted={submitted}
-        />
-      ))}
+      {questions.map((question, idx) => {
+        if (question.type === 'short-answer') {
+          return (
+            <SAQuestion
+              key={idx}
+              question={question}
+              userAnswer={shortAnswers[idx]}
+              onAnswerChange={(answer) => handleShortAnswerChange(idx, answer)}
+              submitted={submitted}
+            />
+          );
+        } else { //assumes question type is mcq if no question.type defined.
+          return (
+            <MCQuestion
+              key={idx}
+              question={question}
+              selectedOption={selectedOptions[idx]}
+              onOptionSelect={(optionIndex) => handleOptionSelect(idx, optionIndex)}
+              submitted={submitted}
+            />
+          );
+        }
+      })}
       <button onClick={handleSubmit} disabled={submitted}>
         Submit
       </button>
