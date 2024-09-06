@@ -2,6 +2,14 @@
 
 this repo provides functionality of various tools to build MDX pages for structs.sh. Currently in development.
 
+
+
+
+
+https://github.com/user-attachments/assets/301672c7-1a43-4cd8-8e2f-02e07ac43f3b
+
+
+
 ## TODO: 
  1. **chatGPT API:** chatgpt api. GPT suggested quiz questions. could have an 'advanced questions' button for leetcode-level gpt  generated questions. Or another way of getting leetcode-style questions for COMP3821 students.
 
